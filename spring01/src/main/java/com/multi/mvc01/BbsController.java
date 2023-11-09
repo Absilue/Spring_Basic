@@ -1,5 +1,7 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,5 +39,28 @@ public class BbsController {
 		BbsDAO dao = new BbsDAO();
 		int result = dao.delete(bag);
 		model.addAttribute("result", result);
+	}
+	
+	@RequestMapping("one")
+	private void one(BbsDTO2 dto, Model model) throws Exception{
+		System.out.println(dto);
+		BbsDAO dao = new BbsDAO();
+		BbsDTO2 bag = dao.one(dto);
+		// 검색결과는 bag에 들어있음 ==> views/one.jsp에 결과를 출력
+		// bag을 one.jsp까지 전달해주어야 함 ==> model
+		model.addAttribute("bag", bag);
+		// 자동타입변환(자동형변환, Casting, 업캐스팅)
+	}
+	@RequestMapping("list")
+	private void list(Model model) throws Exception {
+		// dao를 이용해서 여러개를 받아서 가지고 오기
+		BbsDAO dao = new BbsDAO();
+		ArrayList<BbsDTO2> list = dao.list();
+		System.out.println(list.size());
+		
+		// views/list.jsp까지 넘어가야함 ==> model
+		
+		// model을 이용해서 검색결과인 list를 list.jsp까지 넘김
+		model.addAttribute("list", list);
 	}
 }
