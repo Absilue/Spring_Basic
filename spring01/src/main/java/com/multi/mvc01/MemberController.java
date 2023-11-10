@@ -2,6 +2,7 @@ package com.multi.mvc01;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 // 싱글톤 객체 생성 + 컨트롤러 역활을 하는 클래스로도 설정
 public class MemberController {
 
+		@Autowired 
+		// MemberDAO 클래스로 만들어진 객체가 램에 어디에 있는지 주소를 찾아서
+		// 아래 변수에 주소를 넣어줌
+		MemberDAO dao; // 100
+	
 	// 버튼을 눌러서 요청 --> 함수 하나씩 할당
 	@RequestMapping("insert")
 	public void insert(MemberDTO bag) {
@@ -16,7 +22,7 @@ public class MemberController {
 		//함수(bag) --> 요청할때 만들어짐(프로토타입)
 		System.out.println(bag);
 		
-    	MemberDAO dao = new MemberDAO();
+    	// MemberDAO dao = new MemberDAO();
         int result = dao.insert(bag); //int(1/0)
         String resultText = "";
         if(result == 1){
@@ -31,11 +37,11 @@ public class MemberController {
 	public void login(MemberDTO bag, HttpSession session) throws Exception {
 		System.out.println(bag);
 		
-		MemberDAO dao = new MemberDAO();
-    	boolean result = dao.login(bag);
+		// MemberDAO dao = new MemberDAO();
+    	int result = dao.login(bag);
      	// 결과값은 boolean(true/false)로 넘어옴
      	
-     	if(result){
+     	if(result == 1){
      		// if(조건) { 조건이 true이면 괄호안을 실행}
      		// 세션을 설정
      		session.setAttribute("id", bag.getId());

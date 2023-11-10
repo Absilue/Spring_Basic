@@ -18,7 +18,7 @@
 		for(BbsDTO2 bag: list) {
 	%>	
 		게시판 Id : <%=bag.getId() %> <br>
-		게시판 Title : <%=bag.getTitle() %> <br>
+		<a href="one?id=<%=bag.getId()%>">게시판 Title : <%=bag.getTitle() %> </a> <br>
 		게시판 Content : <%=bag.getContent() %> <br>
 		게시판 Writer : <%=bag.getWriter() %> <br>
 		<hr color="blue">

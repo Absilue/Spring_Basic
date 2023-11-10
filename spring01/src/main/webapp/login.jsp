@@ -13,10 +13,10 @@
         	bag.setPw(pw);
         	
         	MemberDAO dao = new MemberDAO();
-        	boolean result = dao.login(bag);
+        	int result = dao.login(bag);
          	// 결과값은 boolean(true/false)로 넘어옴
          	
-         	if(result){
+         	if(result == 1){
          		// if(조건) { 조건이 true이면 괄호안을 실행}
          		// 세션을 설정
          		session.setAttribute("id", bag.getId());
