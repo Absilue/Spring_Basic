@@ -1,4 +1,5 @@
-<%@page import="com.multi.mvc01.BbsDTO2"%>
+<%@page import="java.util.List"%>
+<%@page import="com.multi.mvc01.BbsDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.multi.mvc01.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -25,7 +26,9 @@
 	</div>
 	<div id="center">
 	<br>
-		<% if(session.getAttribute("id") != null ) { %>
+		<%
+		if(session.getAttribute("id") != null ) {
+		%>
 			<span class="alert alert-success"> 
 				<%=session.getAttribute("id")%>님 환영합니다.
 			</span>
@@ -35,12 +38,15 @@
 			<a href="logout.jsp">
 				<button class="btn btn-outline-danger">로그아웃</button>
 			</a>
-		<% } %>
+		<%
+		}
+		%>
 		<%
 			BbsDAO dao = new BbsDAO();
-			ArrayList<BbsDTO2> list = dao.list();
+			//클릭하고 ctrl + shift + 	m
+			List<BbsDTO> list = dao.list();
 		%>
-		전체게시물: <%= list.size() %>개 
+		전체게시물: <%=list.size()%>개 
 		<br><br>
 		<table border="1" class="table table-hover">
 				<thead>
@@ -51,7 +57,9 @@
 					</tr>
 				</thead>
 				<tbody>
-				<% for(BbsDTO2 bag: list) {%>
+				<%
+				for(BbsDTO bag: list) {
+				%>
 					<tr class="table-info">
 						<td><%= bag.getTitle() %></td>
 						<td>

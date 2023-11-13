@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+
+    <!-- ORM(Object Relational Mapping), Mapper 파일!  -->
+    <insert id="insert" parameterType="bookVO">
+        insert into book values (#{id}, #{name}, #{url}, #{img})
+        <!-- #{id} memberVO.getId()  -->
+    </insert>
+    
+    <update id="update" parameterType="bookVO">
+        update book set name = #{name}  where id = #{id}
+    </update>
+
+    <select id="one" resultType="bookVO" parameterType="bookVO">
+        select * from book where id = #{id}
+    </select>
+    
+    <select id="list" parameterType="bookVO">
+        select * from book order by id desc
+    </select>
+    
+</mapper>

@@ -14,12 +14,6 @@
 <!-- Latest compiled JavaScript -->
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	
-<style type="text/css">
-body{
-	background: yellow;
-}
-</style>	
 </head>
 <body>
 	<div id="total">
@@ -35,7 +29,7 @@ body{
 			<!-- 로그인 -->
 			<% if (session.getAttribute("id") == null) { %>
 			<!--로그인이 되지 않았을 때 화면을 보이게 하면 됨.  -->
-			<form action="login.jsp">
+			<form action="login">
 				<table border="1" bordercolor='red' class="table table-striped">
 					<tr>
 						<td>아이디</td>
@@ -53,6 +47,7 @@ body{
 					</tr>
 				</table>
  			</form>
+ 			<hr color="red">
  			<form action="insert">
 				<table border="1" bordercolor='red' class="table table-dark">
 					<tr>

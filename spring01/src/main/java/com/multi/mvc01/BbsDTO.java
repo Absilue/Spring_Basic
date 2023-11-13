@@ -1,16 +1,16 @@
 package com.multi.mvc01;
 
 public class BbsDTO {
-	private String id;
+	private int id;
 	private String title;
 	private String content;
 	private String writer;
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -43,5 +43,7 @@ public class BbsDTO {
 		return "BbsDTO [id=" + id + ", title=" + title + ", content=" + content + ", writer=" + writer + "]";
 	}
 
-	
+	// getter/setter
+	// toString
+	//ctrl + shift + f : 코드 자동 정리
 }

@@ -13,11 +13,11 @@
 		    response.sendRedirect(“bbs.jsp”);
 		4. db처리후 결과가 1이 아니면 ~~~ 저와함께 구현!
      -->
-     <jsp:useBean id="bag" class="com.multi.mvc01.BbsDTO2"></jsp:useBean>
+     <jsp:useBean id="bag" class="com.multi.mvc01.BbsDTO"></jsp:useBean>
      <jsp:setProperty property="*" name="bag"/>
      
      <%
-     	BbsDAO dao = new BbsDAO();
+     	BbsDAO dao = new BbsDAO();//????????
      	int result = dao.insert(bag);//1
      	if(result == 1){
      		response.sendRedirect("bbs.jsp");

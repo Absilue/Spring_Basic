@@ -14,8 +14,13 @@
 <!-- Latest compiled JavaScript -->
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<style type="text/css">
+body{
+	background: yellow;
+}
+</style>
 </head>
-<body bgcolor="pink">
+<body>
 	<div id="total">
 		<div id="top">
 			<jsp:include page="../../top.jsp"></jsp:include>
@@ -24,9 +29,11 @@
 			<jsp:include page="../../top2.jsp"></jsp:include>
 		</div>
 		<div id="center">
-		<br><br>
-			<font color = "pink">회원가입이 요청되었습니다 <br></font>
-			<a href="member.jsp">회원가입/로그인페이지로 이동</a>
+			<br>
+			
+			<font color="red">회원가입이 요청되었습니다.!</font>
+			
+			<br> <a href="member.jsp">회원가입/로그인페이지로 이동</a>
 		</div>
 	</div>
 </body>

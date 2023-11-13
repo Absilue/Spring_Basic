@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="yellow">
-	수정 요청됨 <hr>
-	<a href="bbs.jsp">게시판 목록으로 이동</a>
+수정요청됨. 
+<a href="bbs.jsp">게시판 목록으로 go!</a>
 </body>
 </html>

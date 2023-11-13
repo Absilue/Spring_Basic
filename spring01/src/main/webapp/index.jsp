@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	스프링 연습 두번째!!
+스프링 설정 제대로 되었는지 확인!! 성공!!
 </body>
 </html>

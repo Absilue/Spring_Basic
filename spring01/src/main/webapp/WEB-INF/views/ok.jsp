@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<img src="resources/img/yes.png"> <br>
-	<a href="bbs.jsp">게시판 목록으로 이동</a>
+<img src="resources/img/ok.jpg"><br>
+<a href="bbs.jsp">게시판 목록으로 go!</a>
 </body>
 </html>

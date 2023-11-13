@@ -30,6 +30,7 @@
 		<% } %>
 		<br>
 					
+		<hr color="blue">
 		<form action="insert2">
 				<table border="1"  class="table table-hover">
 					<tr  class="table-warning">

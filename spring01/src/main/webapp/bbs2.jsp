@@ -1,13 +1,13 @@
-<%@page import="com.multi.mvc01.BbsDTO2"%>
+<%@page import="com.multi.mvc01.BbsDTO"%>
 <%@page import="com.multi.mvc01.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <jsp:useBean id="bag" class="com.multi.mvc01.BbsDTO2"></jsp:useBean>
+    <jsp:useBean id="bag" class="com.multi.mvc01.BbsDTO"></jsp:useBean>
     <jsp:setProperty property="id" name="bag"/>
     <%
-    	BbsDAO dao = new BbsDAO();
-    	BbsDTO2 bag2 = dao.one(bag);
+    BbsDAO dao = new BbsDAO();
+        	BbsDTO bag2 = dao.one(bag);
     %>
 <!DOCTYPE html>
 <html>
@@ -61,10 +61,10 @@
 				if(session.getAttribute("id") != null){
 					if(session.getAttribute("id").equals(bag2.getWriter())){
 			%>
-				<a href="update.jsp?id=<%=bag.getId() %>">
+				<a href="update.jsp?id=<%= bag.getId()%>">
 						<button class="btn btn-danger">수정하기</button>
 				</a>
-				<a href="delete2?id=<%=bag.getId() %>">
+				<a href="delete2?id=<%= bag.getId()%>">
 						<button class="btn btn-danger">삭제하기</button>
 				</a>
 			<% }} %>

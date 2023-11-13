@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+	
+	<insert id="create" parameterType="productVO" >
+		insert into product values (
+		#{id},#{title},#{content},
+		#{price},#{company},#{img})
+	</insert>
+	
+	<update id="update" parameterType="productVO" >
+		update product set title = #{title} where id = #{id}
+	</update>
+	
+	<select id="one" parameterType="productVO" resultType="productVO">
+		select * from product where id = #{id}
+	</select>
+	
+	<select id="list" resultType="productVO">
+		select * from product
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
