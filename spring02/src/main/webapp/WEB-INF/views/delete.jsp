@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>북마크 추가 성공</title>
+    <title>북마크 삭제 성공</title>
     <style>
         body {
             background-color: #03C75B;
@@ -43,7 +43,7 @@
 </head>
 <body>
     <main>
-        <h3>북마크가 성공적으로 추가되었습니다</h3>
+        <h3>북마크가 성공적으로 삭제되었습니다</h3>
         <a href="index.jsp">첫 화면으로 돌아가기</a>
     </main>
 </body>
