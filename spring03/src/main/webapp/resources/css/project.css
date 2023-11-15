@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+* {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+	float: left;
+	padding: 15px;
+	border-radius: 50px 0 50px 0;
+}
+/*li:first-child{
+	border-radius: 50px 0 50px 0;
+}
+li:last-child{
+	border-radius: 0 50px 0 50px;
+}*/
+li:nth-child(2n){
+	background: pink;
+}
+li:nth-child(2n+1){
+	background: orange;
+}
+
+#total {
+	width: 800px;
+	height: 800px;
+	color: blue;
+	font: 25px 궁서 bold;
+	background-image: url("../img/back.png");
+}
+
+#top {
+	width: 800px;
+	height: 70px;
+	background: lime;
+}
+
+#top2 {
+	width: 250px;
+	height: 300px;
+	background: black;
+	color: yellow;
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	border-radius: 300px 100px 300px 100px;
+	
+}
+
+#center {
+	width: 800px;
+	height: 700px;
+}
+
+
+
+
+
