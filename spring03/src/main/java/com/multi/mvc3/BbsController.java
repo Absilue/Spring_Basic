@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller // 싱글톤 + 컨트롤러 등록
 public class BbsController {
@@ -36,6 +37,13 @@ public class BbsController {
 		//views/list.jsp까지 넘어가야 함.==>Model 
 		//model을 이용해서 검색결과인 list를 list.jsp까지 넘기자.!
 		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("jsonbbs")
+	@ResponseBody
+	public List<BbsDTO> jsonbbs() throws Exception {
+		List<BbsDTO> list = dao.list();
+		return list;
 	}
 	
 	// 요청하나당 함수하나.

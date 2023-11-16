@@ -2,10 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="reply">
 
-	<insert id="create" parameterType="replyVO" >
-		insert into reply values (null,#{oriid},#{content},#{writer})
+	<insert id="create" parameterType="replyVO"  useGeneratedKeys="true" keyProperty="id">
+		insert into reply values (null, #{oriid}, #{content}, #{writer})
 	</insert>
 
+	<!-- mybatis는 db테이블의 컬럼명과 dto의 변수명이 같으면 검색했을 때, 해당 컬럼에 맞는 값을 꺼내
+			dto의 이름이 같은 변수를 찾아서 자동으로 값을 넣어줌 set변수명(); -->
+			
+	<!-- 컬럼명과 dto의 변수명이 같지 않으면, 수동으로  설정해줘야함-->
+	
+	<!-- <resultMap type="replyVO" id="result1">
+			<result property="id" column="no"/>
+			<result property="bbsId" column="oriid"/>
+			<result property="content" column="content"/>
+			<result property="writer" column="writer"/>
+			</resultMap> -->
+	<!-- <select id="list" resultMap="result1"> -->
 	<select id="list" resultType="replyVO" parameterType="int">
 		select * from reply
 		where oriid = #{id}
