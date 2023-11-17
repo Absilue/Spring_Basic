@@ -95,7 +95,7 @@
 </script>
 </head>
 <body>
-    <button id="b3">JSON으로 받아와보자(list)</button>
+    <button id="b3">JSON으로 받아오기(list)</button>
     <hr color="red">
     <div id="result">ajax 통신 결과 들어가는 곳<hr></div>
 </body>

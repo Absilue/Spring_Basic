@@ -3,6 +3,7 @@ package com.multi.mvc3;
 public class MapVO {
 	private double lat;
 	private double lon;
+	private String location;
 	
 	public double getLat() {
 		return lat;
@@ -15,6 +16,14 @@ public class MapVO {
 	}
 	public void setLon(double lon) {
 		this.lon = lon;
+	}
+	
+	public String getLocation() {
+		return location;
+	}
+	
+	public void setLocation(String location) {
+		this.location = location;
 	}
 	
 	@Override
