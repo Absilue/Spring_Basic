@@ -7,16 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class PageDAO {
+public class CarDAO {
 
 	@Autowired
 	SqlSessionTemplate my;
 	
-	public List<BbsVO> list1(PageVO pageVO) {
-		return my.selectList("bbs.list", pageVO);
+	public List<CarVO> list1(PageVO2 pageVO2) {
+		return my.selectList("car.list", pageVO2);
 	}
 	
 	public int count() {
-		return my.selectOne("bbs.count");
+		return my.selectOne("car.count");
 	}
 }
