@@ -62,6 +62,7 @@
 </head>
 <body>
     <a href="list">미술관 전체 목록</a><br>
+    <a href="list2">프로그램 전체 목록</a><br>
     <hr color="#ff6347">
 
 </body>

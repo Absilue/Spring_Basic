@@ -1,12 +1,11 @@
-<%@page import="com.multi.test100.MuseumVO"%>
+<%@page import="com.multi.test100.ProgramVO"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>미술관 목록</title>
+    <title>프로그램 목록</title>
     <style>
         body {
             background-color: #fafad2; /* 레몬치킨 */
@@ -46,18 +45,21 @@
 </head>
 <body bgcolor="yellow">
     <% 
-        ArrayList<MuseumVO> list = (ArrayList<MuseumVO>)request.getAttribute("list"); 
-        for(MuseumVO bag: list){
+        ArrayList<ProgramVO> list = (ArrayList<ProgramVO>)request.getAttribute("list2"); 
+        for(ProgramVO bag: list){
     %>
         <div class="post-container">
             <div class="post-info">
-                미술관 ID <%= bag.getMuseum_Id()%> <br>
-                미술관명 <a href="list2.jsp?museum_Id=<%= bag.getMuseum_Id() %>"><%= bag.getName() %></a> <br>
-                미술관 위치 <%= bag.getLocation()%> <br>
-                미술관 운영시간 <%= bag.getTime_open()%> <br>
-                미술관 운영시간 <%= bag.getTime_close()%> <br>
-                미술관 휴관일 <%= bag.getClosure()%> <br>
-                미술관 전화번호 <%= bag.getTel()%> <br>               
+                프로그램 ID <%= bag.getProgram_id()%> <br>
+                미술관 ID <%= bag.getMuseum_id()%> <br>
+                프로그램명 <%= bag.getTitle()%> <br>
+                프로그램 이미지 <%= bag.getImg()%> <br>
+                대표 아티스트 <%= bag.getArtist()%> <br>
+                프로그램 테마 <%= bag.getTheme()%> <br>
+                전시 시작일 <%= bag.getStart_day()%> <br>
+                전시 종료일 <%= bag.getEnd_day()%> <br>
+                입장료 <%= bag.getPrice()%> <br>
+                문의 전화번호 <%= bag.getTel()%> <br>               
             </div>
             <hr color="#e75480">
         </div>

@@ -13,7 +13,6 @@ public class MuseumVO {
     private String closure;
     private String tel;
     
-
 	public int getMuseum_Id() {
 		return museum_Id;
 	}

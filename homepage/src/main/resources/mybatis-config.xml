@@ -5,10 +5,12 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="com.multi.test100.MuseumVO" alias="museumVO"></typeAlias>
+		<typeAlias type="com.multi.test100.ProgramVO" alias="programVO"></typeAlias>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="mapper/museum.xml" />
+		<mapper resource="mapper/program.xml" />
 	</mappers>
 </configuration>
 
