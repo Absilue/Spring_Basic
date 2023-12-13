@@ -12,12 +12,11 @@ public class ProgramDAO {
 	@Autowired
 	SqlSessionTemplate my;
 	
-	public List<ProgramVO> list() throws Exception {
-		List<ProgramVO> list = my.selectList("program.list");
-		return list;
-	}
-	
-    // museumId에 해당하는 미술관의 프로그램 목록을 반환하는 메서드
+    public List<ProgramVO> list() throws Exception {
+        List<ProgramVO> list = my.selectList("program.list");
+        return list;
+    }
+
     public List<ProgramVO> getProgramsByMuseumId(int museum_id) throws Exception {
         List<ProgramVO> list = my.selectList("program.getProgramsByMuseumId", museum_id);
         return list;
