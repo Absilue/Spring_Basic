@@ -8,6 +8,7 @@ public class MuseumVO {
     private int museum_Id;
     private String name;
     private String location;
+    private String img;
     private Time time_open;
     private Time time_close;
     private String closure;
@@ -30,6 +31,12 @@ public class MuseumVO {
 	}
 	public void setLocation(String location) {
 		this.location = location;
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
 	}
 	public Time getTime_open() {
 		return time_open;
@@ -55,10 +62,10 @@ public class MuseumVO {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	
 	@Override
 	public String toString() {
-		return "MuseumVO [museumId=" + museum_Id + ", name=" + name + ", location=" + location + ", time_open="
-				+ time_open + ", time_close=" + time_close + ", closure=" + closure + ", tel=" + tel + "]";
+		return "MuseumVO [museum_Id=" + museum_Id + ", name=" + name + ", location=" + location + ", img=" + img
+				+ ", time_open=" + time_open + ", time_close=" + time_close + ", closure=" + closure + ", tel=" + tel
+				+ "]";
 	}
 }

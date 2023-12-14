@@ -77,6 +77,6 @@
 <body>
     <img src="resources/img/seoul.jpg" class="img-fluid mb-4" alt="Payco Logo">
     <hr color="#c7c7de">
-    <a href="list" class="link">미술관 전체 목록</a><br>
+    <a href="list" class="link">서울시 미술관 목록</a><br>
 </body>
 </html>
