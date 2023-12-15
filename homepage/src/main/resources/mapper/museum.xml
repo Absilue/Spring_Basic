@@ -6,4 +6,8 @@
 	<select id="list" resultType="MuseumVO">
 		select * from museum order by #{museum_id}
 	</select>
+	
+    <select id="search" parameterType="String" resultType="museumVO">
+        SELECT * FROM museum WHERE name LIKE CONCAT('%', #{name}, '%')
+    </select>
 </mapper>

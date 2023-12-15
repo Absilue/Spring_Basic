@@ -121,12 +121,12 @@
 </head>
 <body>
     <!-- 검색 폼 -->
-    <div class="search-form">
-        <form action="search" method="GET"> <!-- action 수정 -->
-            <input type="text" name="name" placeholder="미술관명으로 검색" required>
-            <button type="submit">검색</button>
-        </form>
-    </div>
+<div class="search-form">
+    <form action="${pageContext.request.contextPath}/search2" method="GET">
+        <input type="text" name="name" placeholder="미술관명으로 검색" required>
+        <button type="submit">검색</button>
+    </form>
+</div>
 
     <% 
         ArrayList<MuseumVO> list = (ArrayList<MuseumVO>)request.getAttribute("list"); 

@@ -16,4 +16,9 @@ public class MuseumDAO {
 		List<MuseumVO> list = my.selectList("museum.list");
 		return list;
 	}
+	
+	public List<MuseumVO> search(String name) {
+		List<MuseumVO> list = my.selectList("museum.search", name);
+		return list;
+	}
 }

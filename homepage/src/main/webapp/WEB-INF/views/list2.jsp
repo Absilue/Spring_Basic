@@ -21,7 +21,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .post-info {
@@ -68,12 +68,24 @@
             text-decoration: none;
             display: block;
             width: fit-content;
-            margin: 20px auto 0; /* 위쪽 여백 추가 및 중앙 정렬 */
+            margin: 10px auto 0; /* 위쪽 여백 추가 및 중앙 정렬 */
         }
 
         .back-btn:hover {
             background-color: #4682b4; /* 스틸 블루 */
         }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 20px; /* 버튼 위 여백 */
+        }
+
+        /* 버튼 간의 간격을 위한 스타일 */
+        .back-btn {
+            display: inline-block; /* 인라인 요소로 변환하여 가로 정렬 */
+            margin-right: 10px; /* 버튼 사이 간격 조절 */
+        }
+        
     </style>
 </head>
 <body bgcolor="yellow">
@@ -94,8 +106,12 @@
                 <img src="resources/img/${program.img}" alt="${program.title} 이미지">
             </div>
             <hr color="#e75480">
+            <a href="reserve.jsp" class="back-btn">예약하기</a>
         </div>
     </c:forEach>
-    <a href="museum.jsp" class="back-btn">처음 화면으로 돌아가기</a>
+    <div class="button-container">
+        <a href="${pageContext.request.contextPath}/list" class="back-btn">이전 화면으로 돌아가기</a>
+        <a href="museum.jsp" class="back-btn">처음 화면으로 돌아가기</a>
+    </div>
 </body>
 </html>
