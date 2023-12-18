@@ -90,8 +90,9 @@
 <body>
     <!-- 검색 결과를 표시할 부분 -->
     <div class="result-container">
-        <h2>검색 결과</h2>
         <c:if test="${not empty searchResult}">
+            <input type="hidden" name="keyword" value="${param.name}">
+            <h2>'${param.name}'에 대한 검색결과</h2>
             <c:forEach var="museum" items="${searchResult}">
                 <div class="post-container">
                     <div class="post-info">
